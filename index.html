@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link href="css/jquery.mobile-1.2.0.min.css" rel="stylesheet">
+		<script src="js/jquery-1.8.2.min.js"> </script>
+		<script src="js/jquery.mobile-1.2.0.min.js"> </script>
+	
+	
+	
+	</head>
+	
+	<body> 
+			<!-- Start of index  -->
+			<div data-role="page" id="index" data-theme="d" data-transition="slide">
+				<!-- header -->
+				<div data-role="header">
+				<h1></h1>
+				</div><!-- End of Header -->
+				
+				<!-- content -->
+				<div data-role="content">
+				<br><br><br><br>
+				<input type="text" placeholder="Email or Number">
+				<input type="password" placeholder="Password">
+					<div data-role="button">Login</div>
+						
+							<div data-role ="button" data-theme="b"> Login Facebook </div>
+							<a data-role ="button" data-rel="popup" href="#popupRegister"> Register </a>
+						
+				<center><a href="#popupSkip" data-rel="popup">Skip Login</a>
+				</div><!-- End of Content -->
+				
+				<!-- popup Register -->
+				<div data-role="popup" id="popupRegister" >
+					<div data-role="header">
+						<h1>Register</h1>
+					</div>
+					<!-- content -->
+					<div data-role="content">
+						<input type="text" placeholder="Username">
+						<input type="password" placeholder="Password">
+						<input type="password" placeholder="Confirm Password">
+						<br>
+						<hr>
+						<center><legend>Select Department</legend>
+							<fieldset data-role="controlgroup" data-type="horizontal">
+								
+							     	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+							     	<label for="radio-choice-1">CBA</label>
+
+							     	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+							     	<label for="radio-choice-2">CCS</label>
+
+							     	<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
+							     	<label for="radio-choice-3">CAHS</label>
+
+							     	<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4"  />
+							     	<label for="radio-choice-4">CEAS</label>
+							</fieldset>
+
+						<div align="center"><a data-role="button" data-inline="true" href="#index">Cancel</a>
+						<a data-role="button" data-inline="true" data-theme="b" href="#ByPassLogin">Register Account</a></div>
+					</div><!-- End of Content -->
+				</div><!-- End of Popop  -->
+
+				<!-- pupop container BYPASS -->
+				<div data-role="popup" id="popupSkip" >
+					<div data-role="header">
+						<h1>Skip Login?</h1>
+					</div>
+					<div data-role="content">
+					<p>Skipping Login limit you to comment and post</p><p>Are you sure do you want to skip Login?</p>
+					<div align="right"><a data-role="button" data-mini="true" data-inline="true" href="#index">Cancel</a>
+					<a data-role="button" data-mini="true" data-inline="true" data-theme="b" href="#ByPassLogin">Agree</a></div>
+					</div>
+				</div><!-- End of Popop  -->
+
+				<!-- footer -->
+				<div data-role="footer" data-position="fixed">
+						<h1>&copyCopyright2015</h1>
+				</div><!--  End of footer -->
+			</div><!-- End of page index -->
+			
+			<div data-role="page" id="ByPassLogin" data-theme="d" data-transition="slide">
+				<div data-role="header"><a data-icon="home" href="#index">Logout</a>
+				<h1>Welcome Guest</h1>
+				</div>
+				
+				<div data-role="footer" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+						<li> <a href="#index"> HOME </a> </li>
+						<li> <a href="#view"> VIEW </a> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div data-role="page" id="view" data-theme="d" data-transition="slide">
+				<div data-role="header">
+				<h1>BMI Calculator</h1>
+				</div>
+				
+				<div data-role="content">
+					Name: <p id="showName"> </p>
+					Age: <p id="showAge"> </p>
+					BMI Result:<p id="showbmires"> </p>
+					Rate:<p id="showbmirate"> </p>
+					<button onclick="show()">Show last Record</button>
+				</div>
+				
+				<div data-role="footer" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+						<li> <a href="#index"> HOME </a> </li>
+						<li> <a href="#calc"> CALC</a> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+	</body>
+
+
+</html>
